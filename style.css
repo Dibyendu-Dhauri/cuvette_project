@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    background-color: #FFCD9E;
+    display: flex;
+    width: 100%;
+height: 592px;
+
+}
+.left{
+display: flex;
+flex-direction: column;
+margin-left: 150px;
+margin-top: 100px;
+width: 50%;
+}
+.heading{
+    width: 562px;
+    height: 108px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 19px;
+}
+.paragraph{
+    width: 495px;
+    height: 81px;
+    display: flex;
+    flex-direction: column;
+}
+.paragraph p{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.paragraph span{
+    margin-top: 50px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.searchItems{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-top: 103px;
+}
+.inputContainer{
+    border: 3px solid black;
+    border-radius: 8px ;
+    width: 350px;
+height: 64px;
+
+}
+.inputContainer input{
+    width: 100%;
+    height: 100%;
+border-radius: 8px ;
+border: none;
+font-size: 20px;
+font-weight: 600;
+text-indent: 30px;
+
+}
+
+
+.searchItems button {
+    width: 216px;
+height: 64px;
+top: 411px;
+left: 496px;
+border-radius: 8px;
+background-color: black;
+color: white;
+font-size: 20px;
+cursor: pointer;
+}
+.spanContainer{
+    width: 344px;
+height: 61px;
+text-align: center;
+
+}
+.spanContainer span{
+    font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 85px;
+color: white;
+}
+.right{
+    width: 50%;
+}
+.right img{
+    width: 575.0000610351562px;
+    height: 575px;
+    top: 20px;
+    left: 818px;
+    padding: 66.39522552490234px 89.60975646972656px 66.15494537353516px 91.86988830566406px;
+    
+}
+
+.footer{
+    width: 100%;
+height: 250px;
+top: 592px;
+background-color: #282828;
+display: flex;
+}
+
+.footerLeft{
+   width: 50%;
+}
+
+.leftContainer{
+/* display: flex; */
+flex-direction: column;
+display: inline-flex;
+margin-top: 61px;
+margin-left: 150px;
+}
+.footerLeft span{
+width: 216px;
+height: 36px;
+color: white;
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+}
+
+.footerRight{
+    width: 50%;
+    position: relative;
+}
+
+.rightContainer{
+    display: inline-flex;
+flex-direction: column;
+text-align: right;
+color: white;
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+position: absolute;
+right: 150px;
+top: 61px;
+}
+
+.rightContainer span{
+width: 218px;
+height: 36px;
+}
+
+.footerImg{
+    margin-bottom: 30px;
+}
