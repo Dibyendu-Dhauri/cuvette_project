@@ -1,0 +1,360 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: #6F6AF7;
+    width: 100%;
+    height: 74px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.logo{
+    color: #FFF;
+position: relative;
+left: 105px;
+font-family: 'Delius Unicase', cursive;;
+font-size: 32px;
+}
+.navItems{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 140px;
+}
+
+.navItems span{
+    margin-right: 85px;
+}
+
+.navSearch{
+    /* border: 2px solid black; */
+    border-radius: 63px;
+    display: flex;
+    height: 36px;
+     background-color: white;
+    padding-left: 13px
+
+}
+.navSearch input{
+    border: none;
+    border-radius: 63px;
+    width: 244px;
+    color:  #9F9F9F;
+    font-family: DM Sans;
+font-size: 21px;
+font-weight: 400;
+background-color: transparent;
+outline: none;
+}
+.navSearch img{
+    position: relative;
+    right: 12px;
+    height: 21px;
+    top: 7px;
+    
+}
+
+.navHumberger{
+position: relative;
+right: 41px;
+}
+
+.navHumberger img{
+    width: 41px;
+    height: 33px;
+    color: white;
+}
+
+.bodyItem {
+    /* border: 2px solid black; */
+   display: flex;
+    /* height: 1300px; */
+    /* width: 1279px; */
+    margin-top: 155px;
+    /* margin-left: 150px; */
+    margin-left: 74px;
+}
+
+.heroBox{
+display: flex;
+justify-content: space-around;
+}
+
+.textBox{
+    width: 700px;
+    margin-top: 26px;
+    height: 505px;
+    border-radius: 20px;
+    
+    background-color: #E5D8FF;
+}
+.textBox textarea {
+    width: 637px;
+    height: 480px;
+    background-color: transparent;
+font-size: 16px;
+font-weight: 400;
+line-height: 33px;
+border: none;
+    resize: none;
+    color: #6F7373;
+    outline: none;
+    margin-left: 20px;
+}
+.featured{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    height: 120px;
+    margin-top: 45px;
+    margin-left: 40px;
+    margin-right: 19px;
+}
+
+.question{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    border-radius: 11px;
+    background-color: #929DFF;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    width: 250px;
+    height: 80px;
+    box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
+}
+
+
+.question span{
+    margin-left: 38px;
+}
+
+.answer{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    border-radius: 11px;
+    background-color:  #734CF2;
+    box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: 250px;
+    height: 80px;
+}
+.answer span{
+    margin-left: 38px;
+}
+
+.participated{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    border-radius: 11px;
+    background-color: #D288FF;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: 250px;
+    height: 80px;
+    box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
+}
+.participated span{
+    margin-left: 38px;
+}
+
+.passed{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    border-radius: 11px;
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: 250px;
+    height: 80px;
+    box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
+}
+
+.passed span{
+    margin-left: 38px;
+}
+
+.info{
+    /* border: 1px solid black; */
+    margin-top: 113px;
+    background-color: #483EFF;
+    border-radius: 21px;
+    display: flex;
+        height: 400px;
+        margin-bottom: 50px;
+   /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;  */
+    
+}
+
+.leftInfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    /* border: 1px solid; */
+}
+
+.leftInfo span{
+        border: 2px solid white;
+    border-radius: 20px;
+
+        font-size: 31px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+        width: 294px;
+    height: 75px;
+        color: white;
+}
+
+.leftInfo span:nth-child(1) {
+    background-color: #BCE0F6;
+   color: black;
+   border: none;
+   font-weight: 550;
+    box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
+}
+
+.rightInfo{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    width: 746px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding-left: 70px;
+}
+
+.rightInfo h2{
+font-weight: 700;
+    font-size: 40px;
+}
+
+.name{
+font-size: 25px;
+
+}
+
+.spanName{
+        font-weight: 600;
+    margin-right: 25px;
+
+}
+
+.email{
+font-size: 25px;
+    margin-top: 15px;
+}
+
+.spanEmail{
+        font-weight: 600;
+    margin-right: 25px;
+
+}
+.phone{
+font-size: 25px;
+    margin-top: 15px;
+}
+
+.spanPhone{
+        font-weight: 600;
+    margin-right: 25px;
+
+}
+.marks{
+font-size: 25px;
+    margin-top: 15px;
+}
+
+.spanMarks{
+        font-weight: 600;
+    margin-right: 25px;
+
+}
+
+.nextInfo{
+    display: flex;
+    justify-content: right;
+    margin-top: 22px;
+    margin-right: 40px;
+}
+
+.nextInfo button{
+        padding: 10px;
+    padding-right: 39px;
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+
+}
+
+.mediaIcon{
+    position: absolute;
+    /* position: sticky; */
+
+    top: 240px;
+    right: 10px;
+display: flex;
+flex-direction: column;
+}
+.mediaIcon img{
+    display: block;
+    /* position: sticky; */
+     /* top: 109px; */
+     margin-bottom: 10px;
+   width: 60px;
+}
+
+
+
+
+  
+  @media (min-height: 300px) { 
+    .mediaIcon {
+        top: 100px;
+        position: fixed;
+        right: 13px;
+    }
+     } 
+  
+     .helpImg{
+        position: fixed;
+        right: 50px;
+        top: 500px;
+        
+     }
+
+  
+  
+  
+  
