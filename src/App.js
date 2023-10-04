@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import DetailsForm from "./components/DetailsForm";
 
 function App() {
+
+  const [cardDetails, setCardDetails] = useState({
+    cardHolderName: "",
+    cardNumber: "",
+    expiryMonth: "",
+    expiryYear: "",
+    cvc:""
+  })
+  
+  const [errorDetails, setErrorDetails] = useState({
+    cardHolderNameError: false,
+    cardNumberError: false,
+    expiryMonthError: false,
+    expiryYearError:false,
+    cvcError:false
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex ">
+      <div className="w-1/4 h-screen gradient-bg" />
+      <div className="w-3/4 bg-gray-300">
+        <DetailsForm cardDetails={cardDetails} setCardDetails={setCardDetails} 
+        setErrorDetails={setErrorDetails}
+        errorDetails={errorDetails} />
+      </div>
     </div>
   );
 }
