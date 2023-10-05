@@ -100,6 +100,9 @@ function App() {
   cardDetails={cardDetails} 
   errorDetails={errorDetails}
   submit={submit} />
+   <div className={`fixed bottom-4 right-4 bg-green-500 text-white py-4 px-4 rounded-md ${(submit && !errorDetails.cardHolderNameError && !errorDetails.cardNumberError && !errorDetails.expiryMonthError && !errorDetails.expiryYearError && !errorDetails.cvcError) ? 'block' : 'hidden'}`}>
+   Your payment has been processed..
+    </div>
     </div>
     </>
   );
