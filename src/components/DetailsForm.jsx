@@ -5,70 +5,73 @@ export default function DetailsForm({
   setCardDetails,
   errorDetails,
   setErrorDetails,
+  setSubmit,
+  handleSubmit
 }) {
-  const validateCardNumber = () => {
-    if (
-      !/^[0-9]+$/.test(cardDetails.cardNumber) ||
-      cardDetails.cardNumber.length !== 12
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const validateCardNumber = () => {
+  //   if (
+  //     !/^[0-9]+$/.test(cardDetails.cardNumber) ||
+  //     cardDetails.cardNumber.length !== 12
+  //   ) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
 
-  const validateCardHolderName = () => {
-    if (!/^[a-zA-Z\s]+$/.test(cardDetails.cardHolderName)) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const validateCardHolderName = () => {
+  //   if (!/^[a-zA-Z\s]+$/.test(cardDetails.cardHolderName)) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
 
-  const validateMonth = () => {
-    if (
-      !/^[0-9]+$/.test(cardDetails.expiryMonth) ||
-      cardDetails.expiryMonth.length !== 2
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-  const validateYear = () => {
-    if (
-      !/^[0-9]+$/.test(cardDetails.expiryYear) ||
-      cardDetails.expiryYear.length !== 2
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const validateMonth = () => {
+  //   if (
+  //     !/^[0-9]+$/.test(cardDetails.expiryMonth) ||
+  //     cardDetails.expiryMonth.length !== 2
+  //   ) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
+  // const validateYear = () => {
+  //   if (
+  //     !/^[0-9]+$/.test(cardDetails.expiryYear) ||
+  //     cardDetails.expiryYear.length !== 2
+  //   ) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
 
-  const validateCvc = () => {
-    if (!/^[0-9]+$/.test(cardDetails.cvc) || cardDetails.cvc.length !== 3) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const validateCvc = () => {
+  //   if (!/^[0-9]+$/.test(cardDetails.cvc) || cardDetails.cvc.length !== 3) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const cardHolderNameError = validateCardHolderName();
-    const cardNumberError = validateCardNumber();
-    const expiryMonthError = validateMonth();
-    const expiryYearError = validateYear();
-    const cvcError = validateCvc();
-    setErrorDetails({
-      cardHolderNameError: cardHolderNameError,
-      cardNumberError: cardNumberError,
-      expiryMonthError: expiryMonthError,
-      expiryYearError: expiryYearError,
-      cvcError: cvcError,
-    });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const cardHolderNameError = validateCardHolderName();
+  //   const cardNumberError = validateCardNumber();
+  //   const expiryMonthError = validateMonth();
+  //   const expiryYearError = validateYear();
+  //   const cvcError = validateCvc();
+  //   setErrorDetails({
+  //     cardHolderNameError: cardHolderNameError,
+  //     cardNumberError: cardNumberError,
+  //     expiryMonthError: expiryMonthError,
+  //     expiryYearError: expiryYearError,
+  //     cvcError: cvcError,
+  //   });
+  //   setSubmit(true)
+  // };
 
   return (
     <div className="flex justify-center items-center h-full">
@@ -88,7 +91,9 @@ export default function DetailsForm({
                   ...cardDetails,
                   cardHolderName: e.target.value,
                 });
+                setSubmit(false);
               }}
+
             />
             {errorDetails.cardHolderNameError && (
               <div className="text-red-600">
@@ -115,7 +120,9 @@ export default function DetailsForm({
                   ...cardDetails,
                   cardNumber: e.target.value,
                 });
+                setSubmit(false);
               }}
+              // onFocus={setSubmit(false)}
             />
             {errorDetails.cardNumberError && (
               <div className="text-red-600">
@@ -137,11 +144,13 @@ export default function DetailsForm({
                   placeholder="MM"
                   //   required
                   value={cardDetails.expiryMonth}
-                  onChange={(e) =>
+                  onChange={(e) =>{
                     setCardDetails({
                       ...cardDetails,
                       expiryMonth: e.target.value,
                     })
+                    setSubmit(false);
+                  }
                   }
                 />
 
@@ -152,11 +161,13 @@ export default function DetailsForm({
                   placeholder="YY"
                   //   required
                   value={cardDetails.expiryYear}
-                  onChange={(e) =>
+                  onChange={(e) =>{
                     setCardDetails({
                       ...cardDetails,
                       expiryYear: e.target.value,
                     })
+                    setSubmit(false);
+                  }
                   }
                 />
               </div>
@@ -182,6 +193,7 @@ export default function DetailsForm({
                     ...cardDetails,
                     cvc: e.target.value,
                   });
+                  setSubmit(false);
                 }}
               />
               {errorDetails.cvcError && (
@@ -192,7 +204,7 @@ export default function DetailsForm({
 
           <button
             type="submit"
-            className="bg-violet-900 text-white px-4 py-3 rounded-md w-full"
+            className="bg-violet-900 text-white px-4 py-3 rounded-md w-full border-none "
           >
             Confirm
           </button>
